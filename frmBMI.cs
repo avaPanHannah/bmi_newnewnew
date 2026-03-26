@@ -37,6 +37,7 @@ namespace bmi_newnewnew
 
         }
 
+
         private void btnRun_Click(object sender, EventArgs e)
         {
             // 1. 驗證輸入
@@ -48,7 +49,6 @@ namespace bmi_newnewnew
                 MessageBox.Show("請輸入有效的身高與體重！", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
             // 2. 計算 BMI
             double heightInMeter = height / 100;
             double bmi = weight / (heightInMeter * heightInMeter);
@@ -68,13 +68,15 @@ namespace bmi_newnewnew
         "嚴重警告：重度肥胖會增加心血管疾病風險，請務必就醫檢查。"
     };
 
+
+
             // 4. 判斷 BMI 區間決定 Index
             int index = 0;
             if (bmi < 18.5) index = 0;
             else if (bmi < 24) index = 1;
             else if (bmi < 27) index = 2;
             else if (bmi < 30) index = 3;
-            else if (bmi < 35) index = 4;
+            else if (bmi < 35) index = 4; 
             else index = 5;
 
             // 5. 輸出結果
